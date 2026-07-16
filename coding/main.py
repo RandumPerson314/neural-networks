@@ -1,13 +1,23 @@
-import activations
-import layers
+from neural_network import activations 
+from neural_network import loss_functions 
+from neural_network import layers
 import numpy as np
+
 relu = activations.relu
 sigmoid = activations.sigmoid
 tanh = activations.tanh
 softmax = activations.softmax
-test_weights = np.array([[1,2,2],[4,3,2],[2,4,5]])
-test_input = np.array([1,6,3])
-test_bias = 1
-tester = layers.output_layer(test_input, test_weights, test_bias, relu)
+u = np.zeros(32)
+v = np.zeros(10)
 
-print(tester.output())
+for i in range(10):
+    v[i] = np.random.default_rng().random()
+
+layer_1 = layers.hidden_layer(10, 32, activations.relu())
+layer_1_forward_pass = layer_1.forward_pass(v)
+
+layer_1_error = loss_functions.MSE(layer_1_forward_pass, u)
+
+
+print(layer_1_forward_pass)
+print(layer_1_error)
