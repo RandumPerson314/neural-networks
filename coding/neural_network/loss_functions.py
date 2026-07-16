@@ -10,5 +10,5 @@ def MSE (guesses, real_answers):
         for i in range(len(guesses)):
             error += (guesses[i] - real_answers[i])**2
 
-        error /= len(guesses)
+        error /= (2 * len(guesses))
         return(error)
