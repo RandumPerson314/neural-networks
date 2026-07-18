@@ -35,7 +35,8 @@ class sigmoid:
         return self.v
     
     def backward(self, grad):
-        self.w = 0
+        self.w = self.v * (1 - self.v)
+        return(self.w)
 
 class tanh:
     def __init__(self):

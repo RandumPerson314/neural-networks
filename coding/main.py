@@ -19,12 +19,12 @@ for i in range(10):
 print(f"start with {u}")
 print(f"we want {v}")
 
-output_layer = layers.output_layer(len(u),len(v),activations.relu())
+output_layer = layers.output_layer(len(u),len(v),activations.sigmoid())
 output_layer_fp = output_layer.forward_pass(u)
 print(f"first try: {output_layer_fp}")
 
-for i in range(1):
+for i in range(1000000):
     output_layer_bp = output_layer.backward_pass(v, 0.1)
     output_layer_fp = output_layer.forward_pass(u)
 
-print(f"hundredth try {output_layer_fp}")
+print(f"last try {output_layer_fp}")

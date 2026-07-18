@@ -15,14 +15,15 @@ class output_layer:
         self.input_size = input_size
         self.n_neurons = n_neurons
 
-        self.weights = parameters.weight_matrix(n_neurons, input_size, "random")
+        self.weights = parameters.weight_matrix(n_neurons, input_size + 1, "random")
         self.bias = parameters.bias(n_neurons, "random")
         self.activation = activation
 
         
     
     def forward_pass(self, input):
-        self.output = self.weights @ input + self.bias
+        input.append(1)
+        self.output = self.weights @ input 
         self.activated_output = self.activation.forward(self.output)
         return(self.activated_output)
     
