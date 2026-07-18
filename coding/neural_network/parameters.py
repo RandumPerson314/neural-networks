@@ -1,16 +1,21 @@
 import numpy as np
 rng = np.random.default_rng()
 
+def xavier_uniform_initialization(rows, cols):
+    limit = np.sqrt(6/(rows+cols))
+    return np.random.uniform(-limit, limit,(rows,cols))
+
+def random_initialization(rows, cols):
+    return np.random.rand(rows, cols) / cols
+
+initializations = {
+    "xavier_uniform": xavier_uniform_initialization,
+    "random": random_initialization
+}
+
 def weight_matrix(rows, cols, initialization):
     matrix = np.zeros((rows, cols))
-    if initialization.lower() == "random":
-        for i in range(rows):
-            row = []
-            for j in range(cols):
-                row.append(rng.random()/cols) 
-            matrix[i] = row
-    else:
-        raise ValueError("Invalid initialization method")
+    matrix = initializations[initialization](rows, cols)
     return(matrix)
 
 def bias(rows, initialization):

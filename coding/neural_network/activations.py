@@ -1,37 +1,32 @@
 import numpy as np
 import math
 
+def positive_sigmoid(u):
+    return 1/(1 + np.exp(-u))
+
+def negative_sigmoid(u):
+    return np.exp(u)/(1+np.exp(u))
+
 class relu:
     def __init__(self):
         pass
 
     def forward(self,u):
-        self.u = u
-        self.v = np.array([])
-        for i in u:
-            self.v = np.append(self.v, np.maximum(0,i))
+        # print(f"u: {u}")
+        self.v = np.maximum(0,u)
+        # print(f"v: {self.v}")
         return self.v
     
     def backward(self, grad):
-        self.w = np.array([])
-        for i in grad:
-            if i >= 0:
-                self.w = np.append(self.w, 1)
-            else:
-                self.w = np.append(self.w, 0)
+        self.w = self.v > 0
         return self.w
+
 class sigmoid:
     def __init__(self):
         pass
     
     def forward(self, u):
-        self.u = u
-        self.v = np.array([])
-        for i in self.u:
-            if i >= 0:
-                self.v = np.append(self.v, 1/(1 + math.exp(-i)))
-            elif i < 0:
-                self.v = np.append(self.v, math.exp(i)/(1+math.exp(i)))
+        self.v = 1/(1 + np.exp(-u))
         return self.v
     
     def backward(self, grad):

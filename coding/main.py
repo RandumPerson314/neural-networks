@@ -7,23 +7,17 @@ relu = activations.relu
 sigmoid = activations.sigmoid
 tanh = activations.tanh
 softmax = activations.softmax
-u = np.array((np.zeros(32)))
-v = np.zeros(10)
-
-for i in range(32):
-    u[i] = np.random.default_rng().random()
-
-for i in range(10):
-    v[i] = np.random.default_rng().random()
+u = np.random.rand(10, 2)
+v = np.random.rand(2, 2)
 
 print(f"start with {u}")
 print(f"we want {v}")
 
-output_layer = layers.output_layer(len(u),len(v),activations.sigmoid())
+output_layer = layers.output_layer(np.shape(u)[0],np.shape(v)[0],activations.sigmoid())
 output_layer_fp = output_layer.forward_pass(u)
 print(f"first try: {output_layer_fp}")
 
-for i in range(10000):
+for i in range(888888):
     output_layer_bp = output_layer.backward_pass(v, 0.01)
     output_layer_fp = output_layer.forward_pass(u)
 

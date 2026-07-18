@@ -1,40 +1,32 @@
 import numpy as np
 from neural_network import parameters
 from neural_network import activations
-rng = np.random.default_rng()
-activations_dict = {
-    "ReLU": activations.relu,
-    "Softmax": activations.softmax,
-    "Sigmoid": activations.sigmoid,
-    "Tanh": activations.tanh,
-    "Leaky ReLU": activations.leaky_relu
-    }
+
+def write_to_debug(text):
+    with open("debug.txt", "a") as f:
+        f.write(text + "\n")
 
 class output_layer:
     def __init__ (self, input_size, n_neurons, activation):
         self.input_size = input_size
         self.n_neurons = n_neurons
 
-        self.weights = parameters.weight_matrix(n_neurons, input_size + 1, "random")
+        self.weights = parameters.weight_matrix(n_neurons, input_size + 1, "xavier_uniform")
         self.bias = parameters.bias(n_neurons, "random")
         self.activation = activation
     
     def forward_pass(self, input):
-        self.input = np.append(input, 1)
+        self.input = input
+        self.batch_size = input.shape[1]
+        self.input = np.vstack([input, np.ones(self.batch_size)])
         self.output = self.weights @ self.input 
         self.activated_output = self.activation.forward(self.output)
         return(self.activated_output)
     
     def backward_pass(self, target, learning_rate):
-        # print(f"activated output[0]: {self.activated_output[0]}")
-        # print(f"target[0]: {target[0]}")
         self.error = target - self.activated_output
-        # print(f"error[0]: {self.error[0]}")
         self.delta = self.error * self.activation.backward(self.output)
-        # print(f"delta[0]: {self.delta}")
-        # print(f"input: {self.input.T}")
-        # print(f"adding to weights: {np.matmul(self.input.T[:, np.newaxis], self.delta[np.newaxis, :])}")
-        self.weights += np.matmul(self.input.T[:, np.newaxis], self.delta[np.newaxis, :]).T * learning_rate
+        self.weights += np.dot(self.delta, self.input.T) * learning_rate
         return(self.delta)
 
 class hidden_layer:
