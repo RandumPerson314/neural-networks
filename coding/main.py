@@ -23,8 +23,8 @@ output_layer = layers.output_layer(len(u),len(v),activations.sigmoid())
 output_layer_fp = output_layer.forward_pass(u)
 print(f"first try: {output_layer_fp}")
 
-for i in range(1000000):
-    output_layer_bp = output_layer.backward_pass(v, 0.1)
+for i in range(1000):
+    output_layer_bp = output_layer.backward_pass(v, 0.01)
     output_layer_fp = output_layer.forward_pass(u)
 
 print(f"last try {output_layer_fp}")

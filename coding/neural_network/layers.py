@@ -18,11 +18,9 @@ class output_layer:
         self.weights = parameters.weight_matrix(n_neurons, input_size + 1, "random")
         self.bias = parameters.bias(n_neurons, "random")
         self.activation = activation
-
-        
     
     def forward_pass(self, input):
-        input.append(1)
+        input = np.append(input, 1)
         self.output = self.weights @ input 
         self.activated_output = self.activation.forward(self.output)
         return(self.activated_output)
@@ -30,8 +28,8 @@ class output_layer:
     def backward_pass(self, target, learning_rate):
         self.error = target - self.activated_output
         self.delta = self.error * self.activation.backward(self.activated_output)
+        print(self.delta)
         self.weights += (self.activated_output.T @ self.delta) * learning_rate
-        self.bias += (np.sum(self.delta, axis=0, keepdims=True) * learning_rate)
         return(self.delta)
 
 class hidden_layer:
