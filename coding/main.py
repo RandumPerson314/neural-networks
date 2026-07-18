@@ -7,7 +7,7 @@ relu = activations.relu
 sigmoid = activations.sigmoid
 tanh = activations.tanh
 softmax = activations.softmax
-u = np.zeros(32)
+u = np.array((np.zeros(32)))
 v = np.zeros(10)
 
 for i in range(32):
@@ -23,7 +23,7 @@ output_layer = layers.output_layer(len(u),len(v),activations.sigmoid())
 output_layer_fp = output_layer.forward_pass(u)
 print(f"first try: {output_layer_fp}")
 
-for i in range(1000):
+for i in range(10000):
     output_layer_bp = output_layer.backward_pass(v, 0.01)
     output_layer_fp = output_layer.forward_pass(u)
 

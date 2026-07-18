@@ -20,16 +20,21 @@ class output_layer:
         self.activation = activation
     
     def forward_pass(self, input):
-        input = np.append(input, 1)
-        self.output = self.weights @ input 
+        self.input = np.append(input, 1)
+        self.output = self.weights @ self.input 
         self.activated_output = self.activation.forward(self.output)
         return(self.activated_output)
     
     def backward_pass(self, target, learning_rate):
+        # print(f"activated output[0]: {self.activated_output[0]}")
+        # print(f"target[0]: {target[0]}")
         self.error = target - self.activated_output
-        self.delta = self.error * self.activation.backward(self.activated_output)
-        print(self.delta)
-        self.weights += (self.activated_output.T @ self.delta) * learning_rate
+        # print(f"error[0]: {self.error[0]}")
+        self.delta = self.error * self.activation.backward(self.output)
+        # print(f"delta[0]: {self.delta}")
+        # print(f"input: {self.input.T}")
+        # print(f"adding to weights: {np.matmul(self.input.T[:, np.newaxis], self.delta[np.newaxis, :])}")
+        self.weights += np.matmul(self.input.T[:, np.newaxis], self.delta[np.newaxis, :]).T * learning_rate
         return(self.delta)
 
 class hidden_layer:
