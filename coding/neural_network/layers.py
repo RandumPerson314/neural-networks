@@ -3,16 +3,14 @@ from neural_network import parameters
 from neural_network import activations
 
 class InputLayer:
-    def __init__ (self, input, target_size, activation):
-        self.input = input
-        self.input_size = np.shape(self.input)[1]
-        self.input = np.hstack([self.input, np.ones((np.shape(self.input)[0],1))])
+    def __init__ (self, input_size, target_size, activation):
+        self.input_size = input_size
         self.target_size = target_size
-
         self.weights = parameters.weight_matrix(self.input_size + 1, self.target_size, "xavier_uniform")
         self.activation = activation
     
-    def forward_pass(self):
+    def forward_pass(self, input):
+        self.input = np.hstack([input, np.ones((np.shape(input)[0],1))])
         self.output = np.dot(self.input, self.weights)
         self.activated_output = self.activation.forward(self.output)
         return(self.activated_output)
