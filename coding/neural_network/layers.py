@@ -39,16 +39,15 @@ class HiddenLayer:
         self.error = np.dot(next_layer.delta, next_layer.old_weights[:-1].T)
         self.delta = self.error * self.activation.backward(self.activated_output)
         self.old_weights = self.weights.copy()
-        self.weights -= np.dot(self.input.T, self.delta) * learning_rate
+        self.grad = np.dot(self.input.T, self.delta) / self.input.shape[0]
+        self.weights -= self.grad * learning_rate
         return(self.delta)
 
     
 class OutputLayer:
-    def __init__ (self, input_size, target, activation):
+    def __init__ (self, input_size, target_size, activation):
         self.input_size = input_size
-        self.target = target
-        self.target_size = np.shape(self.target)[1]
-
+        self.target_size = target_size
         self.weights = parameters.weight_matrix(self.input_size + 1, self.target_size, "xavier_uniform")
         self.activation = activation
     
@@ -58,9 +57,11 @@ class OutputLayer:
         self.activated_output = self.activation.forward(self.output)
         return(self.activated_output)
     
-    def backward_pass(self, learning_rate):
+    def backward_pass(self, target, learning_rate):
+        self.target = target
         self.error =  self.activated_output - self.target
         self.delta = self.error * self.activation.backward(self.activated_output)
         self.old_weights = self.weights.copy()
-        self.weights -= np.dot(self.input.T, self.delta) * learning_rate
+        self.grad = np.dot(self.input.T, self.delta) / self.input.shape[0]
+        self.weights -= self.grad * learning_rate
         return(self.delta)
