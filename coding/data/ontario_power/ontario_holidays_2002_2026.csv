@@ -1,0 +1,287 @@
+date,holiday,statutory
+2002-01-01,New Year's Day,True
+2002-03-29,Good Friday,True
+2002-04-01,Easter Monday (non-statutory),False
+2002-05-20,Victoria Day,True
+2002-07-01,Canada Day,True
+2002-09-02,Labour Day,True
+2002-10-14,Thanksgiving Day,True
+2002-11-11,Remembrance Day (non-statutory),False
+2002-12-25,Christmas Day,True
+2002-12-26,Boxing Day,True
+2003-01-01,New Year's Day,True
+2003-04-18,Good Friday,True
+2003-04-21,Easter Monday (non-statutory),False
+2003-05-19,Victoria Day,True
+2003-07-01,Canada Day,True
+2003-09-01,Labour Day,True
+2003-10-13,Thanksgiving Day,True
+2003-11-11,Remembrance Day (non-statutory),False
+2003-12-25,Christmas Day,True
+2003-12-26,Boxing Day,True
+2004-01-01,New Year's Day,True
+2004-04-09,Good Friday,True
+2004-04-12,Easter Monday (non-statutory),False
+2004-05-24,Victoria Day,True
+2004-07-01,Canada Day,True
+2004-09-06,Labour Day,True
+2004-10-11,Thanksgiving Day,True
+2004-11-11,Remembrance Day (non-statutory),False
+2004-12-25,Christmas Day,True
+2004-12-26,Boxing Day,True
+2004-12-27,Christmas Day (observed),True
+2004-12-28,Boxing Day (observed),True
+2005-01-01,New Year's Day,True
+2005-01-03,New Year's Day (observed),True
+2005-03-25,Good Friday,True
+2005-03-28,Easter Monday (non-statutory),False
+2005-05-23,Victoria Day,True
+2005-07-01,Canada Day,True
+2005-09-05,Labour Day,True
+2005-10-10,Thanksgiving Day,True
+2005-11-11,Remembrance Day (non-statutory),False
+2005-12-25,Christmas Day,True
+2005-12-26,Boxing Day; Christmas Day (observed),True
+2006-01-01,New Year's Day,True
+2006-01-02,New Year's Day (observed),True
+2006-04-14,Good Friday,True
+2006-04-17,Easter Monday (non-statutory),False
+2006-05-22,Victoria Day,True
+2006-07-01,Canada Day,True
+2006-09-04,Labour Day,True
+2006-10-09,Thanksgiving Day,True
+2006-11-11,Remembrance Day (non-statutory),False
+2006-12-25,Christmas Day,True
+2006-12-26,Boxing Day,True
+2007-01-01,New Year's Day,True
+2007-04-06,Good Friday,True
+2007-04-09,Easter Monday (non-statutory),False
+2007-05-21,Victoria Day,True
+2007-07-01,Canada Day,True
+2007-09-03,Labour Day,True
+2007-10-08,Thanksgiving Day,True
+2007-11-11,Remembrance Day (non-statutory),False
+2007-12-25,Christmas Day,True
+2007-12-26,Boxing Day,True
+2008-01-01,New Year's Day,True
+2008-02-18,Family Day,True
+2008-03-21,Good Friday,True
+2008-03-24,Easter Monday (non-statutory),False
+2008-05-19,Victoria Day,True
+2008-07-01,Canada Day,True
+2008-09-01,Labour Day,True
+2008-10-13,Thanksgiving Day,True
+2008-11-11,Remembrance Day (non-statutory),False
+2008-12-25,Christmas Day,True
+2008-12-26,Boxing Day,True
+2009-01-01,New Year's Day,True
+2009-02-16,Family Day,True
+2009-04-10,Good Friday,True
+2009-04-13,Easter Monday (non-statutory),False
+2009-05-18,Victoria Day,True
+2009-07-01,Canada Day,True
+2009-09-07,Labour Day,True
+2009-10-12,Thanksgiving Day,True
+2009-11-11,Remembrance Day (non-statutory),False
+2009-12-25,Christmas Day,True
+2009-12-26,Boxing Day,True
+2009-12-28,Boxing Day (observed),True
+2010-01-01,New Year's Day,True
+2010-02-15,Family Day,True
+2010-04-02,Good Friday,True
+2010-04-05,Easter Monday (non-statutory),False
+2010-05-24,Victoria Day,True
+2010-07-01,Canada Day,True
+2010-09-06,Labour Day,True
+2010-10-11,Thanksgiving Day,True
+2010-11-11,Remembrance Day (non-statutory),False
+2010-12-25,Christmas Day,True
+2010-12-26,Boxing Day,True
+2010-12-27,Christmas Day (observed),True
+2010-12-28,Boxing Day (observed),True
+2011-01-01,New Year's Day,True
+2011-01-03,New Year's Day (observed),True
+2011-02-21,Family Day,True
+2011-04-22,Good Friday,True
+2011-04-25,Easter Monday (non-statutory),False
+2011-05-23,Victoria Day,True
+2011-07-01,Canada Day,True
+2011-09-05,Labour Day,True
+2011-10-10,Thanksgiving Day,True
+2011-11-11,Remembrance Day (non-statutory),False
+2011-12-25,Christmas Day,True
+2011-12-26,Boxing Day; Christmas Day (observed),True
+2012-01-01,New Year's Day,True
+2012-01-02,New Year's Day (observed),True
+2012-02-20,Family Day,True
+2012-04-06,Good Friday,True
+2012-04-09,Easter Monday (non-statutory),False
+2012-05-21,Victoria Day,True
+2012-07-01,Canada Day,True
+2012-09-03,Labour Day,True
+2012-10-08,Thanksgiving Day,True
+2012-11-11,Remembrance Day (non-statutory),False
+2012-12-25,Christmas Day,True
+2012-12-26,Boxing Day,True
+2013-01-01,New Year's Day,True
+2013-02-18,Family Day,True
+2013-03-29,Good Friday,True
+2013-04-01,Easter Monday (non-statutory),False
+2013-05-20,Victoria Day,True
+2013-07-01,Canada Day,True
+2013-09-02,Labour Day,True
+2013-10-14,Thanksgiving Day,True
+2013-11-11,Remembrance Day (non-statutory),False
+2013-12-25,Christmas Day,True
+2013-12-26,Boxing Day,True
+2014-01-01,New Year's Day,True
+2014-02-17,Family Day,True
+2014-04-18,Good Friday,True
+2014-04-21,Easter Monday (non-statutory),False
+2014-05-19,Victoria Day,True
+2014-07-01,Canada Day,True
+2014-09-01,Labour Day,True
+2014-10-13,Thanksgiving Day,True
+2014-11-11,Remembrance Day (non-statutory),False
+2014-12-25,Christmas Day,True
+2014-12-26,Boxing Day,True
+2015-01-01,New Year's Day,True
+2015-02-16,Family Day,True
+2015-04-03,Good Friday,True
+2015-04-06,Easter Monday (non-statutory),False
+2015-05-18,Victoria Day,True
+2015-07-01,Canada Day,True
+2015-09-07,Labour Day,True
+2015-10-12,Thanksgiving Day,True
+2015-11-11,Remembrance Day (non-statutory),False
+2015-12-25,Christmas Day,True
+2015-12-26,Boxing Day,True
+2015-12-28,Boxing Day (observed),True
+2016-01-01,New Year's Day,True
+2016-02-15,Family Day,True
+2016-03-25,Good Friday,True
+2016-03-28,Easter Monday (non-statutory),False
+2016-05-23,Victoria Day,True
+2016-07-01,Canada Day,True
+2016-09-05,Labour Day,True
+2016-10-10,Thanksgiving Day,True
+2016-11-11,Remembrance Day (non-statutory),False
+2016-12-25,Christmas Day,True
+2016-12-26,Boxing Day; Christmas Day (observed),True
+2017-01-01,New Year's Day,True
+2017-01-02,New Year's Day (observed),True
+2017-02-20,Family Day,True
+2017-04-14,Good Friday,True
+2017-04-17,Easter Monday (non-statutory),False
+2017-05-22,Victoria Day,True
+2017-07-01,Canada Day,True
+2017-09-04,Labour Day,True
+2017-10-09,Thanksgiving Day,True
+2017-11-11,Remembrance Day (non-statutory),False
+2017-12-25,Christmas Day,True
+2017-12-26,Boxing Day,True
+2018-01-01,New Year's Day,True
+2018-02-19,Family Day,True
+2018-03-30,Good Friday,True
+2018-04-02,Easter Monday (non-statutory),False
+2018-05-21,Victoria Day,True
+2018-07-01,Canada Day,True
+2018-09-03,Labour Day,True
+2018-10-08,Thanksgiving Day,True
+2018-11-11,Remembrance Day (non-statutory),False
+2018-12-25,Christmas Day,True
+2018-12-26,Boxing Day,True
+2019-01-01,New Year's Day,True
+2019-02-18,Family Day,True
+2019-04-19,Good Friday,True
+2019-04-22,Easter Monday (non-statutory),False
+2019-05-20,Victoria Day,True
+2019-07-01,Canada Day,True
+2019-09-02,Labour Day,True
+2019-10-14,Thanksgiving Day,True
+2019-11-11,Remembrance Day (non-statutory),False
+2019-12-25,Christmas Day,True
+2019-12-26,Boxing Day,True
+2020-01-01,New Year's Day,True
+2020-02-17,Family Day,True
+2020-04-10,Good Friday,True
+2020-04-13,Easter Monday (non-statutory),False
+2020-05-18,Victoria Day,True
+2020-07-01,Canada Day,True
+2020-09-07,Labour Day,True
+2020-10-12,Thanksgiving Day,True
+2020-11-11,Remembrance Day (non-statutory),False
+2020-12-25,Christmas Day,True
+2020-12-26,Boxing Day,True
+2020-12-28,Boxing Day (observed),True
+2021-01-01,New Year's Day,True
+2021-02-15,Family Day,True
+2021-04-02,Good Friday,True
+2021-04-05,Easter Monday (non-statutory),False
+2021-05-24,Victoria Day,True
+2021-07-01,Canada Day,True
+2021-09-06,Labour Day,True
+2021-10-11,Thanksgiving Day,True
+2021-11-11,Remembrance Day (non-statutory),False
+2021-12-25,Christmas Day,True
+2021-12-26,Boxing Day,True
+2021-12-27,Christmas Day (observed),True
+2021-12-28,Boxing Day (observed),True
+2022-01-01,New Year's Day,True
+2022-01-03,New Year's Day (observed),True
+2022-02-21,Family Day,True
+2022-04-15,Good Friday,True
+2022-04-18,Easter Monday (non-statutory),False
+2022-05-23,Victoria Day,True
+2022-07-01,Canada Day,True
+2022-09-05,Labour Day,True
+2022-10-10,Thanksgiving Day,True
+2022-11-11,Remembrance Day (non-statutory),False
+2022-12-25,Christmas Day,True
+2022-12-26,Boxing Day; Christmas Day (observed),True
+2023-01-01,New Year's Day,True
+2023-01-02,New Year's Day (observed),True
+2023-02-20,Family Day,True
+2023-04-07,Good Friday,True
+2023-04-10,Easter Monday (non-statutory),False
+2023-05-22,Victoria Day,True
+2023-07-01,Canada Day,True
+2023-09-04,Labour Day,True
+2023-10-09,Thanksgiving Day,True
+2023-11-11,Remembrance Day (non-statutory),False
+2023-12-25,Christmas Day,True
+2023-12-26,Boxing Day,True
+2024-01-01,New Year's Day,True
+2024-02-19,Family Day,True
+2024-03-29,Good Friday,True
+2024-04-01,Easter Monday (non-statutory),False
+2024-05-20,Victoria Day,True
+2024-07-01,Canada Day,True
+2024-09-02,Labour Day,True
+2024-10-14,Thanksgiving Day,True
+2024-11-11,Remembrance Day (non-statutory),False
+2024-12-25,Christmas Day,True
+2024-12-26,Boxing Day,True
+2025-01-01,New Year's Day,True
+2025-02-17,Family Day,True
+2025-04-18,Good Friday,True
+2025-04-21,Easter Monday (non-statutory),False
+2025-05-19,Victoria Day,True
+2025-07-01,Canada Day,True
+2025-09-01,Labour Day,True
+2025-10-13,Thanksgiving Day,True
+2025-11-11,Remembrance Day (non-statutory),False
+2025-12-25,Christmas Day,True
+2025-12-26,Boxing Day,True
+2026-01-01,New Year's Day,True
+2026-02-16,Family Day,True
+2026-04-03,Good Friday,True
+2026-04-06,Easter Monday (non-statutory),False
+2026-05-18,Victoria Day,True
+2026-07-01,Canada Day,True
+2026-09-07,Labour Day,True
+2026-10-12,Thanksgiving Day,True
+2026-11-11,Remembrance Day (non-statutory),False
+2026-12-25,Christmas Day,True
+2026-12-26,Boxing Day,True
+2026-12-28,Boxing Day (observed),True

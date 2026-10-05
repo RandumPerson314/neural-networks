@@ -12,6 +12,11 @@ df_train = df_train.replace({
     "False": 0
 })
 
+df_test = df_test.replace({
+    "True": 1,
+    "False": 0
+})
+
 y_train = df_train["SalePrice"].to_numpy(dtype=np.float64).reshape(-1, 1)
 X_train = df_train.drop(["SalePrice", "Order", "Unnamed: 0.1", "Unnamed: 0", "drop"], axis=1).to_numpy(dtype=np.float64)
 
@@ -28,6 +33,7 @@ X_test = df_test.drop(["SalePrice", "Order", "Unnamed: 0.1", "Unnamed: 0", "drop
 
 y_test_scaled = (y_test - y_train_mean) / y_train_std 
 X_test = (X_test - X_mean) / (X_std + 1e-8)
+X_test = np.delete(X_test, [237,473, 472], axis=0)
 
 
 print("largest test values per feature:")
