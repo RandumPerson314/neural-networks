@@ -93,6 +93,11 @@ feature_cols = [
     if retain
 ]
 
+np.save("data/ames_X_test.npy", X_test_raw)
+np.save("data/ames_X_train.npy", X_train_raw)
+np.save("data/ames_y_train.npy", y_train)
+np.save("data/ames_y_test.npy", y_test)
+
 # Standardize using training statistics only.
 X_mean = X_train_raw.mean(axis=0)
 X_std = X_train_raw.std(axis=0)
