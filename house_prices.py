@@ -5,7 +5,7 @@ import neural_network.parameters as parameters
 import numpy as np
 import matplotlib.pyplot as plt
 
-epochs = 1000
+epochs = 10000
 
 batch_size = 64
 neurons_1 = 32
@@ -98,3 +98,52 @@ print(f"Model's first five guesses on training data:\n {train_guess[:5].round()}
 print(f"Real first five house prices in training data:\n {y_train[:5]}")
 print(f"Model's first five guesses on testing data:\n {test_guess[:5].round()}")
 print(f"Real first five house prices in testing data:\n {y_test[:5]}")
+
+
+x = np.arange(10)  # The label locations: [0, 1, 2, 3]
+width = 0.35                    # The width of each individual bar
+
+# 3. Create the plot
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
+
+# =========================================================================
+# CHART 1: Left Panel (ax1)
+# =========================================================================
+rects1_a = ax1.bar(x - width/2, train_guess.round().flatten()[:10], width, label='Model', color='#1f77b4')
+rects1_b = ax1.bar(x + width/2, y_train.flatten()[:10], width, label='Real', color='#ff7f0e')
+
+ax1.set_ylabel('House Price ($)')
+ax1.set_xlabel('House Number')
+ax1.set_title('Model Guess vs Real House Price (Training Data)')
+ax1.set_xticks(x)
+ax1.set_xticklabels(range(1,11))
+ax1.legend()
+
+# Prevent overlapping numbers by rotating them
+ax1.bar_label(rects1_a, padding=5, rotation=90)
+ax1.bar_label(rects1_b, padding=5, rotation=90)
+ax1.set_ylim(0, max(max(train_guess.round().flatten()[:10]), max(y_train.flatten()[:10])) * 1.15)
+
+
+# =========================================================================
+# CHART 2: Right Panel (ax2)
+# =========================================================================
+rects2_a = ax2.bar(x - width/2, test_guess.round().flatten()[:10], width, label='Model', color='#2ca02c')
+rects2_b = ax2.bar(x + width/2, y_test.flatten()[:10], width, label='Real', color='#d62728')
+
+ax2.set_ylabel('House Price ($)')
+ax2.set_xlabel('House Number')
+ax2.set_title('Model Guess vs Real House Price (Testing Data)')
+ax2.set_xticks(x)
+ax2.set_xticklabels(range(1,11))
+ax2.legend()
+
+# Prevent overlapping numbers by rotating them
+ax2.bar_label(rects2_a, padding=5, rotation=90)
+ax2.bar_label(rects2_b, padding=5, rotation=90)
+ax2.set_ylim(0, max(max(test_guess.round().flatten()[:10]), max(y_test.flatten()[:10])) * 1.15)
+
+
+# 3. Clean up spacing and display
+plt.tight_layout()
+plt.show()
