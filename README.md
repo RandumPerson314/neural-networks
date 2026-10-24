@@ -7,3 +7,7 @@ This is primarily a diagnostic task to ensure the nonlinearity of the network. I
 ![XOR comparison](docs/XOR_comparison.png)
 
 ### House Price Prediction
+
+
+![MSE vs Epoch](docs/MSE_vs_epoch.png)
+![MSE vs Epoch](docs/model_vs_real.png)
