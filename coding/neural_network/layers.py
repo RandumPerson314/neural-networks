@@ -60,8 +60,13 @@ class OutputLayer:
     def backward_pass(self, target, learning_rate):
         self.target = target
         self.error =  self.activated_output - self.target
+        # print("error:", self.error[:4])
         self.delta = self.error * self.activation.backward(self.activated_output)
+        # print("delta:", self.delta[:4])
         self.old_weights = self.weights.copy()
         self.grad = np.dot(self.input.T, self.delta) / self.input.shape[0]
+        # print("grad:", self.grad[:4])
         self.weights -= self.grad * learning_rate
+        # print("old weights:", self.old_weights[:3])
+        # print("weights:", self.weights[:3])
         return(self.delta)

@@ -3,6 +3,7 @@ import math
 
 class relu:
     def __init__(self):
+        print("relu inited")
         pass
 
     def forward(self,u):
