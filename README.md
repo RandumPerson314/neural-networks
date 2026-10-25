@@ -7,7 +7,7 @@ This is primarily a diagnostic task to ensure the nonlinearity of the network. I
 ![XOR comparison](docs/XOR_comparison.png)
 
 ### House Price Prediction
-
+The house prediction model is the main application of the neural network in this project. The program considers input data such as the square footage, neighbourhood, and more about a house and outputs a prediction for how much the house will sell for. The model was trained on a dataset containing 2350 houses and tested on a dataset with 590 houses. The images below show how the model improved as it learned, and how it performs on training and test data. Initially there was a concern where the weights were growing concerningly fast and the model would break after only a few epochs of training. I found out that this was because the values in the input data were just too large. To fix this, I standardized all the data across training, testing, input, and output. After I implemented standardization, the model began to run smoothly.
 
 ![MSE vs Epoch](docs/MSE_vs_epoch.png)
 ![MSE vs Epoch](docs/model_vs_real4.png)
