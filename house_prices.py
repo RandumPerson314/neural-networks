@@ -5,13 +5,13 @@ import neural_network.parameters as parameters
 import numpy as np
 import matplotlib.pyplot as plt
 
-epochs = 10000
+epochs = 1000
 
 batch_size = 64
 neurons_1 = 32
 neurons_2 = 32
 neurons_3 = 32
-lr = 0.2
+lr = 0.15
 
 
 X_train = np.load("data/ames_X_train.npy")
