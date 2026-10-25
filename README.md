@@ -10,4 +10,4 @@ This is primarily a diagnostic task to ensure the nonlinearity of the network. I
 
 
 ![MSE vs Epoch](docs/MSE_vs_epoch.png)
-![MSE vs Epoch](docs/model_vs_real.png)
+![MSE vs Epoch](docs/model_vs_real4.png)
